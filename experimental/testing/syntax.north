@@ -1,6 +1,5 @@
 ..
 SYNTAX HERE IS EXPERIMENTAL AND LIKELY TO CHANGE
-And is currently just simple stuff
 ..
 
 # This is a comment
@@ -8,15 +7,58 @@ And is currently just simple stuff
 This is a multiline comment
 ..
 
-# Dynamically typed
-var name = "for demo purposes hehe"; name = "Geraldine Flop IV"
-# Newlines and semicolons indicate EOL
+# Statically typed (for my sanity (this could change if I start using my brain))
+var name: Str = "balls hehe"
+name = "Geraldine Flop IV"
+..
+=== Types ===
+String: `Str`
+Integer: `Int`
+Floating point number: `Float`
+Boolean: `Bool`
+..
+
+# If statement
+if (name == "") {
+    println("why no name :<")
+} elif (name == "Turtle Tim") {
+    println("You're supposed to be dead.")
+    quit()
+} else {
+    # uh idk, nothing to be done
+    # This can be empty, (just `else {}`), no need for something like Python's `pass`
+}
 
 # Function
-fun greet(name): {
+fun greet: Void (name) { # Space after function name and type, and after function type and before parentheses, is optional (MAYBE: as with alot of spaces)
     # If there's a variable with the same name as a parameter, the parameter will be used
     println("Hello, {name}!")
 }
 
 # Calling
 greet(name) # Outputs Hello, Geraldine Flop IV!
+
+fun 
+
+# Class
+class Person(name: Str, age: Int, height: Str, depressed: Bool) {
+    # Defaults in classes
+
+    fun info:Str () {
+        var str out = "{this.name} is {this.age} years old "; if (this.depressed) {out += "and is {this.height}."} else {out += "is {this.height}, and is depressed."}
+        return out
+    }
+}
+
+var joe: Person = Person("Joe", 24, "4'10\"")
+var bob: Person = Person("Bob", 79, "10'4\"", True)
+
+joe.info()
+bob.info()
+
+..
+=== Other Notes ===
+Newlines and semicolons indicate EOL
+
+`()` = condition, `{}` = expression
+..
