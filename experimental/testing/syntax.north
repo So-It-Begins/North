@@ -1,3 +1,22 @@
+..
+SYNTAX HERE IS EXPERIMENTAL AND LIKELY TO CHANGE
+And is currently just simple stuff
+..
+
+# This is a comment
+..
+This is a multiline comment
+..
+
 # Dynamically typed
-new name = "Gerald"
-set name = "Geraldine Twop IV"
+var name = "for demo purposes hehe"; name = "Geraldine Flop IV"
+# Newlines and semicolons indicate EOL
+
+# Function
+fun greet(name): {
+    # If there's a variable with the same name as a parameter, the parameter will be used
+    println("Hello, {name}!")
+}
+
+# Calling
+greet(name) # Outputs Hello, Geraldine Flop IV!
